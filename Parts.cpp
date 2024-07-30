@@ -73,4 +73,3 @@ void Parts::DerotatePart(int ind){
 		indJ=0;
 	}
 }
-
