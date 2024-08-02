@@ -1,9 +1,13 @@
-UI.cpp
 #include "UI.hpp"
 #include <iostream>
 #include <fstream>
 #include <algorithm>
+
 using namespace std;
+
+/**
+ * @brief Constructor: Initializes UI elements with default values and loads the font.
+ */
 UI::UI() {
     if (!font.loadFromFile("ka1.ttf")) {
         cout << "Error loading text" << std::endl;
@@ -75,6 +79,10 @@ UI::UI() {
     showHighScores = false;
 }
 
+/**
+ * @brief Sets the score text based on the score value.
+ * @param x The score value.
+ */
 void UI::SetScore(int x) {
     if (x <= 9) scoreText.setString("000" + std::to_string(x));
     else if (x <= 99) scoreText.setString("00" + std::to_string(x));
@@ -83,6 +91,10 @@ void UI::SetScore(int x) {
     else scoreText.setString("9999");
 }
 
+/**
+ * @brief Sets the max score text based on the max score value.
+ * @param x The max score value.
+ */
 void UI::SetMaxScore(int x) {
     if (x <= 9) maxScoreText.setString("000" + std::to_string(x));
     else if (x <= 99) maxScoreText.setString("00" + std::to_string(x));
@@ -91,20 +103,34 @@ void UI::SetMaxScore(int x) {
     else maxScoreText.setString("9999");
 }
 
+/**
+ * @brief Sets the game over flag and restarts the clock.
+ */
 void UI::GameOver() {
     gameOver = true;
     clock.restart();
 }
 
+/**
+ * @brief Sets the new score flag.
+ */
 void UI::NewScore() {
     newScore = true;
 }
 
+/**
+ * @brief Resets the game over and new score flags.
+ */
 void UI::ResetGameOverFlags() {
     gameOver = false;
     newScore = false;
 }
 
+/**
+ * @brief Prompts the player to play again or go to the main menu.
+ * @param window The render window.
+ * @return True if the player chooses to play again, false otherwise.
+ */
 bool UI::AskToPlayAgain(RenderWindow& window) {
     Text prompt("Press Y To Play Again\n\nPress M to go Main Menu", font, 20);
     prompt.setFillColor(Color::Color(0, 255, 255));
@@ -143,6 +169,11 @@ bool UI::AskToPlayAgain(RenderWindow& window) {
     return false;
 }
 
+/**
+ * @brief Shows the main menu and handles menu interactions.
+ * @param window The render window.
+ * @return True if the game should start, false otherwise.
+ */
 bool UI::ShowMainMenu(RenderWindow& window) {
     while (window.isOpen()) {
         Event event;
@@ -178,6 +209,10 @@ bool UI::ShowMainMenu(RenderWindow& window) {
     return false;
 }
 
+/**
+ * @brief Displays the high scores.
+ * @param window The render window.
+ */
 void UI::ShowHighScores(RenderWindow& window) {
     std::vector<std::pair<std::string, int>> highScores;
     std::ifstream file("highscores.txt");
@@ -222,6 +257,11 @@ void UI::ShowHighScores(RenderWindow& window) {
     }
 }
 
+/**
+ * @brief Prompts the player to enter their name for a new high score.
+ * @param window The render window.
+ * @return The player's name.
+ */
 std::string UI::GetPlayerName(RenderWindow& window) {
     std::string playerName;
     Text namePrompt("NEW HIGH SCORE!!\n\nEnter Your Name:", font, 25);
@@ -258,6 +298,11 @@ std::string UI::GetPlayerName(RenderWindow& window) {
     return playerName;
 }
 
+/**
+ * @brief Draws the UI elements on the render target.
+ * @param rt The render target.
+ * @param rs The render states.
+ */
 void UI::draw(RenderTarget& rt, RenderStates rs) const {
     if (gameOver) {
         rt.draw(gameOverText, rs);
