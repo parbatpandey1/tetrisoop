@@ -23,3 +23,5 @@ About the game.
 
 
 It is a classic Puzzle game Tetris which has 7 tetrominoes of different shapes. Our goal is to complete a row with tetrominoes.
+
+ ![Screenshot 2024-07-31 090328](https://github.com/user-attachments/assets/f0ff3cb2-ea82-41bf-8a0f-2b9be3eacd26)
