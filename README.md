@@ -5,6 +5,7 @@ Compilation Instructions:
 The project was done using Windows OS.
 
 Dependencies: SFML 2.5.1 Using Cmake with txt file.
+https://www.sfml-dev.org/download/sfml/2.5.1/
 
 Use CMakeLists.txt file to integrate all the code with SFML library.Give proper path of SFML in CMakeLists.txt
 
