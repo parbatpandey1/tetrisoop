@@ -1,29 +1,25 @@
-Tetris OOP Project
+# Tetris OOP Project
 
+## Compilation Instructions:
+This project was developed on Windows OS.
 
-Compilation Instructions:
-The project was done using Windows OS.
+### Dependencies:
+- SFML 2.5.1
+- CMake
 
-Dependencies: SFML 2.5.1 Using Cmake with txt file.
-https://www.sfml-dev.org/download/sfml/2.5.1/
+You can download SFML from the following link: https://www.sfml-dev.org/download/sfml/2.5.1/
 
-Use CMakeLists.txt file to integrate all the code with SFML library.Give proper path of SFML in CMakeLists.txt
+### Building the Project:
+1. Use the `CMakeLists.txt` file to integrate all the code with the SFML library.
+2. Ensure you provide the correct path to the SFML library in the `CMakeLists.txt` file.
+3. Use CMake to generate the project files and build the `.exe` file.
 
-CMake builds .exe file.
+### Using Visual Studio 2022:
+1. Open the project folder from Visual Studio.
+2. Click on the executable file to run the game. The IDE will handle the rest.
 
-Using Visual Studio 2022.
-
-Open this folder from Visual Studio and click on executive File and Play the IDE does the work itself.
-
-
-
-
-
-About the game.
-
-
-It is a classic Puzzle game Tetris which has 7 tetrominoes of different shapes. Our goal is to complete a row with tetrominoes.
-
+## About the Game:
+This is a classic puzzle game, Tetris, featuring 7 different tetromino shapes. The objective is to complete rows using these tetrominoes.
 GameStates:
 
 MainMenu
