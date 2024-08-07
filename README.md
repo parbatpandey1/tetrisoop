@@ -20,24 +20,24 @@ You can download SFML from the following link: https://www.sfml-dev.org/download
 
 ## About the Game:
 This is a classic puzzle game, Tetris, featuring 7 different tetromino shapes. The objective is to complete rows using these tetrominoes.
-GameStates:
+### GameStates:
 
-MainMenu
+- **Main Menu:**
 
 
  ![Screenshot 2024-07-31 090328](https://github.com/user-attachments/assets/f0ff3cb2-ea82-41bf-8a0f-2b9be3eacd26)
 
- GamePlay
+- **GamePlay:**
 
  
  ![Screenshot 2024-07-30 124009](https://github.com/user-attachments/assets/e8edf78f-af25-4362-8f5c-2aa7ea4c6f73)
 
-GameOver
+- **GameOver:**
 
 
 ![Screenshot 2024-07-30 124024](https://github.com/user-attachments/assets/099670f6-f127-461b-8cbf-e7d0ec5d3d39)
 
-HighScore
+- **HighScore:**
 
 ![Screenshot 2024-08-02 164337](https://github.com/user-attachments/assets/a436a214-9b46-4840-b820-39aaa78feb30)
 
