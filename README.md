@@ -12,7 +12,7 @@ You can download SFML from the following link: https://www.sfml-dev.org/download
 ### Building the Project:
 1. Use the `CMakeLists.txt` file to integrate all the code with the SFML library.
 2. Ensure you provide the correct path to the SFML library in the `CMakeLists.txt` file.
-3. Give path of SFML bin in enviroment variable path.
+3. Give path of SFML bin in environment variable path.
 4. Use CMake to generate the project files and build the `.exe` file.
 
 ### Using Visual Studio 2022:
